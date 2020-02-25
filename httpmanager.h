@@ -18,7 +18,7 @@ public:
 signals:
     void ImageReady(QPixmap *image);
 
-public slots:
+private slots:
     void ImageDownloadedHandler(QNetworkReply * reply);
 
 private:
