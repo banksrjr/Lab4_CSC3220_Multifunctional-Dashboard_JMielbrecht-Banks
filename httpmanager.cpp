@@ -34,3 +34,6 @@ void httpManager::ImageDownloadedHandler(QNetworkReply *reply)
 
     emit ImageReady(image);
 }
+
+
+// Delete this Comment later

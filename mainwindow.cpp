@@ -45,3 +45,6 @@ void MainWindow::on_imageDownloadButton_clicked()
 {
     HTTPManager->sendImageRequest();
 }
+
+
+// Delete this Comment later
