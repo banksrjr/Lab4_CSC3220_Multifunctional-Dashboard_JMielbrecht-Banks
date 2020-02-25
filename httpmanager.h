@@ -13,7 +13,7 @@ public:
     explicit httpManager(QObject *parent = nullptr);
     ~httpManager();
 
-    void sendImageRequest();
+    void sendImageRequest(QString zip);
 
 signals:
     void ImageReady(QPixmap *image);

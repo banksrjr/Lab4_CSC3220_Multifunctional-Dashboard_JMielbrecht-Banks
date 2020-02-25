@@ -13,10 +13,13 @@ httpManager::~httpManager()
     delete imageDownloadManager;
 }
 
-void httpManager::sendImageRequest()
+void httpManager::sendImageRequest(QString zip)
 {
     QNetworkRequest request;
-    request.setUrl(QUrl("https://dev.virtualearth.net/REST/V1/Imagery/Map/Road/98119/13?mapSize=600,300&mapLayer=TrafficFlow&format=png&key=At14ISaQrcssgnbusM6kAkN-0CIQJxhompctQATywuF-rk_-H9HJ41Ad7VKIPBjO"));
+    QString address = "https://dev.virtualearth.net/REST/V1/Imagery/Map/Road/"
+            + zip
+            + "/13?mapSize=600,300&mapLayer=TrafficFlow&format=png&key=At14ISaQrcssgnbusM6kAkN-0CIQJxhompctQATywuF-rk_-H9HJ41Ad7VKIPBjO";
+    request.setUrl(QUrl(address));
     imageDownloadManager->get(request);
     qDebug() << "Image Request Sent to Address " << request.url();
 }
